@@ -64,6 +64,6 @@ while True:
         # Form a python dictionary payload
         data = {'meaning': 'luminosity', 'value': luminosity.value()}
         # Publish the payload as a json message to the 'data' MQTT topic.
-        client.publish(mqtt_credentials['topic'] + '/data',
+        client.publish(mqtt_credentials['topic'] + 'data',
                        payload=json.dumps(data),
                        qos=0, retain=False)
